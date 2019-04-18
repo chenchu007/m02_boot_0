@@ -8,8 +8,8 @@ El número conocido más alto es 277777788888899 con 11 pasos
 
 def per(n, nVez=0):
     if len(str(n))==1:
-        #print(n)
-        return "Done"
+        print("\nFinalizado con {} paso{}.".format(nVez,"" if nVez==1 else "s"))
+        return 
     
     digits = [int(i) for i in str(n)]
     nVez += 1
@@ -21,3 +21,6 @@ def per(n, nVez=0):
     per(result, nVez)
 
 # 277777788888899 -> 11
+
+if __name__ == "__main__":
+    per("277777788888899")
